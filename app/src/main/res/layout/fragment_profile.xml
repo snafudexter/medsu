@@ -1,0 +1,117 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center_vertical"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imgPic"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name Goes"
+            android:id="@+id/txtName"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:textSize="25dp"
+            android:layout_toRightOf="@+id/imgPic"
+            android:lines="1"
+            android:textAlignment="textStart"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CPD"
+            android:id="@+id/textView4"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="true"
+            android:textSize="25dp"
+            android:layout_toRightOf="@+id/imgPic"
+            android:layout_margin="5dp"
+            android:lines="1"
+            android:layout_below="@+id/txtName"
+            android:textAlignment="textStart" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:id="@+id/llApp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Appraisal Year"
+                android:id="@+id/textView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Due Date"
+                android:id="@+id/textView6" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Revalidation Date"
+                android:id="@+id/textView7" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llApp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Appraiser Information"
+                android:id="@+id/textView8"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Name"
+                android:id="@+id/textView9"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:id="@+id/imageView2"
+                android:layout_alignParentBottom="true"
+                android:layout_alignStart="@+id/llApp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>
