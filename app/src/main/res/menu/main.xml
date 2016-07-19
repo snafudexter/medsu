@@ -1,74 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/mUserinfo"
+        android:icon="@drawable/ic_user"
+        android:orderInCategory="100"
+        android:title="UserInfo"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/mHelp"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_help"
+        android:title="Help"
+        app:showAsAction="always" />
+
     <item
         android:id="@+id/mScopeofWork"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Scope of Work"
         app:showAsAction="never" />
     <item
         android:id="@+id/mCurrentPDP"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Current PDP"
         app:showAsAction="never" />
     <item
-        android:id="@+id/mRecordofPDP"
+        android:id="@+id/mRecordofCPD"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Record of CPD"
         app:showAsAction="never" />
     <item
         android:id="@+id/mQualityImpAct"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Quality Improvement Activities"
         app:showAsAction="never" />
     <item
         android:id="@+id/mSigEvents"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Significant Events"
         app:showAsAction="never" />
     <item
         android:id="@+id/mMultiFeedback"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Multisource Feedback"
         app:showAsAction="never" />
     <item
         android:id="@+id/mComplatintCompliments"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Complaints + Compliments"
         app:showAsAction="never" />
     <item
         android:id="@+id/mAchievAsp"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Achievements + Aspirations"
         app:showAsAction="never" />
     <item
         android:id="@+id/mProbityHealth"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Probity + Health"
         app:showAsAction="never" />
     <item
         android:id="@+id/mSupportingInfo"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Supporting Information"
         app:showAsAction="never" />
     <item
         android:id="@+id/mPreAppPrep"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Pre-Appraisal Preparation"
         app:showAsAction="never" />
     <item
         android:id="@+id/mNextYearPDP"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Next Year PDP"
         app:showAsAction="never" />
     <item
         android:id="@+id/mAppraisersSummary"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Appraisers Summary"
         app:showAsAction="never" />
     <item
         android:id="@+id/mOutput"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Output"
         app:showAsAction="never" />
 </menu>

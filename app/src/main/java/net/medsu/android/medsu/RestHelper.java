@@ -2,12 +2,17 @@ package net.medsu.android.medsu;
 
 import android.net.http.HttpResponseCache;
 import android.os.AsyncTask;
+import android.preference.PreferenceActivity;
 import android.provider.Settings;
 import android.util.Log;
 
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
+import org.apache.http.ParseException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
@@ -44,19 +49,35 @@ public class RestHelper extends AsyncTask<Void, Void, String>
     HttpClient client;
     HttpPost post;
     List<NameValuePair> lParams;
-    public RestHelper(String url, HashMap params)
+    public RestHelper(String url, HashMap params, HashMap header)
     {
         this.url = url;
-        lParams = new ArrayList<>();
-        Set set = params.entrySet();
-        Iterator iterator = set.iterator();
-        while(iterator.hasNext())
-        {
-            Map.Entry me = (Map.Entry)iterator.next();
-            lParams.add(new BasicNameValuePair(me.getKey().toString(), me.getValue().toString()));
-        }
+
         client = new DefaultHttpClient();
         post = new HttpPost(url);
+
+        //header
+        if(header != null) {
+            Set st = header.entrySet();
+            Iterator i = st.iterator();
+            while (i.hasNext()) {
+                Map.Entry me = (Map.Entry) i.next();
+                post.setHeader(me.getKey().toString(), me.getValue().toString());
+
+            }
+        }
+
+        //params
+        if(params != null) {
+            lParams = new ArrayList<>();
+            Set set = params.entrySet();
+            Iterator iterator = set.iterator();
+            while (iterator.hasNext()) {
+                Map.Entry me = (Map.Entry) iterator.next();
+                lParams.add(new BasicNameValuePair(me.getKey().toString(), me.getValue().toString()));
+            }
+        }
+
     }
 
     @Override
@@ -69,9 +90,9 @@ public class RestHelper extends AsyncTask<Void, Void, String>
     protected String doInBackground(Void... params)
     {
         try {
+            if(lParams != null)
+                post.setEntity(new UrlEncodedFormEntity(lParams, HTTP.DEFAULT_CONTENT_CHARSET));
 
-            post.setEntity(new UrlEncodedFormEntity(lParams));
-            post.addHeader("Content-Type", "x-www-form-urlencoded");
             HttpResponse response = client.execute(post);
 
             int responseCode = response.getStatusLine().getStatusCode();

@@ -7,7 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_login">Sign in</string>
 
-    <string name="domain">http://app.medsu.net</string>
+    <string name="domain">app.medsu.net</string>
     <string name="login">/services/user/login</string>
     <string name="token">/services/session/token</string>
     <string name="currentNodeID">/services/map_id</string>
